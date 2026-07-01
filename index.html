@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Love App</title>
+
+<style>
+body {
+    margin: 0;
+    background: #e7d3b0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial;
+}
+
+.container {
+    text-align: center;
+    width: 85%;
+}
+
+#text {
+    font-size: 18px;
+    white-space: pre-line;
+    margin-bottom: 40px;
+}
+
+button {
+    font-size: 50px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div id="text">
+        I remember the first day I saw you like it was yesterday.
+    </div>
+
+    <button onclick="nextLine()">❤️</button>
+
+</div>
+
+<script>
+const story = [
+"I remember the first day I saw you like it was yesterday.",
+"From that moment, I never stopped looking at you.",
+"I admire your beauty more than you could ever imagine.",
+"I remember the first day we talked...",
+"the smile on your face, and the sparkle in your eyes.",
+"I remember the first time we laughed together...",
+"I remember your first text, and how I never wanted it to stop.",
+"The first time we ran around at work, just being playful.",
+"Our first kiss the chemistry, the love, and the feeling I had never felt before.",
+"I fell for you long before we ever touched.",
+"Our first night together the most magical night of my life.",
+"Your presence around me calms me, and makes me feel something I cannot describe in words.",
+"You are my everything.",
+"You make me want to work on myself.",
+"You make me want to improve.",
+"You make me the happiest man alive.",
+"You walked into my life unexpectedly and changed everything without even trying.",
+"You made me feel things I did not even know were possible.",
+"Our love, our chemistry, our laughter, our moments everything with you feels special.",
+"I cherish every moment we have created together, and I cannot wait to spend a lifetime with you.",
+"I never lied to you, and I never will you are my everything, and I would never risk that.",
+"Meeting you felt like a miracle I never thought I would experience.",
+"You are the love of my life My Sproetje.",
+"Always and forever.",
+"In this life and the next until the end of time."
+];
+
+const finalMessage =
+`My Sproetje
+
+Everything you just read is how I truly feel about you.
+
+You are my calm, my happiness, my home.
+
+I don’t just love you, I choose you every single day.
+
+Always and forever.`;
+
+let index = 0;
+
+function nextLine() {
+    index++;
+
+    if (index < story.length) {
+        document.getElementById("text").innerText = story[index];
+    } else {
+        document.getElementById("text").innerText = finalMessage;
+    }
+}
+</script>
+
+</body>
+</html>
